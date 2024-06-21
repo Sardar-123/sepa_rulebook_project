@@ -3,37 +3,16 @@
 This project is designed to compare two XSD files and generate an impact analysis report. It uses Streamlit for the web interface and OpenAI for generating impact summaries and test scenarios.
 
 ## Project Structure
-sepa_rulebook_project/
-│
-├── data/
-│ ├── old_version/
-│ ├── new_version/
-│ └── impacts/
-│
-├── src/
-│ ├── parsers/
-│ │ └── parse_xsd.py
-│ ├── comparers/
-│ │ └── compare_elements.py
-│ ├── analyzers/
-│ │ └── impact_analyzer.py
-│ └── utils/
-│ └── openai_helper.py
-│
-├── notebooks/
-├── tests/
-│ ├── test_parse_xsd.py
-│ ├── test_compare_elements.py
-│ └── test_impact_analyzer.py
-├── static/
-│ ├── css/
-│ └── js/
-├── templates/
-│ ├── index.html
-│ ├── upload.html
-│ └── result.html
-│
-├── requirements.txt
-├── README.md
-├── main.py
-└── app.py
+
+## Explanation
+
+- **data/**: Contains subdirectories for different data versions and impacts.
+- **src/**: Source code organized into parsers, comparers, analyzers, and utility scripts.
+- **notebooks/**: Jupyter notebooks for experiments and documentation.
+- **tests/**: Unit tests for the various modules.
+- **static/**: Static files for the web application, such as CSS and JS.
+- **templates/**: HTML templates for the web application.
+- **requirements.txt**: List of Python dependencies.
+- **README.md**: Project documentation.
+- **main.py**: Main script to run the application.
+- **app.py**: Web application entry point.
