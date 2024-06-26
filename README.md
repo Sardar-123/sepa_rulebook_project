@@ -1,6 +1,6 @@
 # SEPA Rulebook Project
 
-This project is designed to compare two XSD files and generate an impact analysis report. It uses Streamlit for the web interface and Gemini API  for generating impact summaries and test scenarios.
+This project is designed to compare two XSD files and generate an impact analysis report. It uses Flask for the web interface and Gemini API  for generating impact summaries and test scenarios.
 
 ## Project Structure
 
