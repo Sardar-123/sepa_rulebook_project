@@ -1,0 +1,36 @@
+## BDD Test Scenarios for SEPA Credit Transfer Message Changes
+
+**Feature:** SEPA Credit Transfer Message Validation
+
+**Background:**
+* These scenarios test the changes made to the SEPA Credit Transfer Message format from a previous version to a new version.
+* The scenarios are based on the provided list of added, modified, and removed elements.
+
+**Scenario Outline:** Validating <Change Type> Element: <Element Path>
+
+**Tags:** SEPA, Credit Transfer, <Change Type>, <Element Path>
+
+**Given** a SEPA Credit Transfer Message 
+**And** the message conforms to the new SEPA rulebook version
+
+**When** validating the element at <Element Path>
+
+**Then** the validation should <Expected Result>
+**And** <Specific Element Details>
+**And** <Additional Notes>
+
+**Examples:**
+
+| Change Type | Element Path | Expected Result | Specific Element Details | Additional Notes |
+|---|---|---|---|---|
+| Added | /Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAcct/ProxyAcct/Tp | be successful | The element should be of type "ProxyAccountType1Choice" |  |
+| Added | /Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/PstlAdr/AdrLine | be successful | The element should be of type "Max70Text" and marked as a "Yellow Field" | This field is newly introduced and optional for the user. |
+| Added | /Document/FIToFICstmrCdtTrf/CdtTrfTxInf/DbtrAcct/Id/Othr/Id | be successful | The element should be of type "Max35Text" |  |
+| Added | /Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/Id/OrgId/Othr/Id | be successful | The element should be of type "LEIIdentifier" |  |
+| Added | /Document/FIToFICstmrCdtTrf/CdtTrfTxInf/CdtrAcct/ProxyAcct/Id | be successful | The element should be of type "ProxyAccountIdentification1_EPC115-06_2023_V1...." and marked as a "Yellow Field" |  |
+| Removed | /Document/FIToFICstmrCdtTrf/CdtTrfTxInf/InstgAgt/FinInstnId/BIC | be successful | The element "BICIdentifier" should no longer be present |  |
+| Modified | /Document/FIToFICstmrCdtTrf/CdtTrfTxInf/InstdAgt | be successful | The element should now be of type "BranchAndFinancialInstitutionIdentification6_E..." and marked as a "Yellow Field" |  |
+| Modified | /Document/FIToFICstmrCdtTrf/CdtTrfTxInf/Dbtr/Nm | be successful | The element should now be of type "Max140Text_EPC115-06_2023_V1.0_SCT_InterPSP" and marked as a "Yellow Field" |  |
+
+
+**Note:** This is a template for generating test scenarios. You need to replace the placeholders like "<Element Path>", "<Expected Result>", "<Specific Element Details>", and "<Additional Notes>" with the actual values from your data. 

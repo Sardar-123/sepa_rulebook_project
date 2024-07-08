@@ -1,0 +1,28 @@
+sepa_rulebook_project/
+│
+├── data/
+│   ├── old_version/
+│   ├── new_version/
+│   └── impacts/
+│
+├── src/
+│   ├── parsers/
+│   │   └── parse_xsd.py
+│   │
+│   ├── comparers/
+│   │   └── compare_elements.py
+│   │
+│   ├── analyzers/
+│   │   └── impact_analyzer.py
+│   │
+│   └── __init__.py
+│
+├── tests/
+│   ├── test_parse_xsd.py
+│   ├── test_compare_elements.py
+│   ├── test_impact_analyzer.py
+│   └── __init__.py
+│
+├── main.py
+├── requirements.txt
+└── README.md

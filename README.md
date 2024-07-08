@@ -1,18 +1,24 @@
 # SEPA Rulebook Project
 
-This project is designed to compare two XSD files and generate an impact analysis report. It uses Streamlit for the web interface and Gemini API  for generating impact summaries and test scenarios.
+## Overview
+This project analyzes changes between different versions of SEPA PACS.008 Credit Transfer Messages and generates impact summaries and BDD test scenarios.
 
-## Project Structure
+## Setup
+1. Clone the repository.
+2. Install dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
 
-## Explanation
+3. Add your Gemini API key to `src/analyzers/impact_analyzer.py`.
 
-- **data/**: Contains subdirectories for different data versions and impacts.
-- **src/**: Source code organized into parsers, comparers, analyzers, and utility scripts.
-- **notebooks/**: Jupyter notebooks for experiments and documentation.
-- **tests/**: Unit tests for the various modules.
-- **static/**: Static files for the web application, such as CSS and JS.
-- **templates/**: HTML templates for the web application.
-- **requirements.txt**: List of Python dependencies.
-- **README.md**: Project documentation.
-- **main.py**: Main script to run the application.
-- **app.py**: Web application entry point.
+## Running the Project
+To run the project, execute:
+python main.py
+
+
+## Running Tests
+To run unit tests, execute:
+python -m unittest tests/test_parse_xsd.py------ for unique
+python -m unittest discover tests------ for all
+

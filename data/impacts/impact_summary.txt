@@ -1,0 +1,9 @@
+The changes in the SEPA pacs .008 Credit Transfer messages from 2021 to 2023 represent a significant shift towards modernization and enhanced interoperability. For users, the most notable impact will be the adoption of the ISO 20022 standard, replacing outdated elements with richer data structures. This translates to more detailed and standardized information exchange during credit transfers. 
+
+A key change is the widespread implementation of BICFIDec2014Identifier and LEIIdentifier, phasing out the previous BICIdentifier and AnyBICIdentifier. This impacts users by requiring updates to their systems and applications to handle these new identifiers for financial institutions and legal entities. 
+
+The inclusion of numerous "Max" fields like "Max70Text" and "Max140Text" allows for longer and more descriptive content in various fields. While beneficial for richer data exchange, users need to ensure their systems can accommodate these expanded character limits. 
+
+Several elements have been modified to align with the newer EPC115-06_2023_V1.0 standard, impacting how certain information is structured and transmitted.  Users must adapt their applications to interpret and process these modified elements correctly, especially those highlighted as "Yellow Fields," which indicate significant alterations requiring attention. 
+
+Overall, these changes demand adjustments in how users interact with SEPA credit transfers. Adapting to the new data fields, identifiers, and message structures is crucial to ensure compatibility with the evolving financial landscape. Failure to adapt could lead to rejected transactions, processing errors, and disruptions in financial operations.
